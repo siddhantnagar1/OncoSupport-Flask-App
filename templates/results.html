@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cluster Assignment Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Petrona&display=swap" rel="stylesheet">
+    <style>
+        /* Rest of your styles */
+        body {
+            font-family: "Petrona", Arial, sans-serif; /* Set the font-family */
+            background-color: #FFFCFB;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-family: "Petrona", Arial, sans-serif; /* Set the font-family */
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .meet-link {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .meet-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Support Group Assignment</h1>
+        <p>Welcome to your Support Group!</p>
+        {% if cluster is not none %}
+        <h2>Welcome to Support Group {{ cluster }}</h2>
+        {% else %}
+        <h2>Cluster assignment is currently pending.</h2>
+        {% endif %}
+        {% if cluster == 0 %}
+            <p>For video meetings, please join: <a href="https://meet.google.com/nid-jtfj-mip">Here</a></p>
+            <p>For chat, please go to: <a href="https://oncosupportgroups-0.com">Here</a></p>
+        {% elif cluster == 1 %}
+            <p>For video meetings, please join: <a href="https://meet.google.com/cih-vtfu-xtv">Here</a></p>
+            <p>For chat, please go to: <a href="https://oncosupportgroups-1.com">Here</a></p>
+        {% elif cluster == 2 %}
+            <p>For video meetings, please join: <a href="https://meet.google.com/gyb-vaqi-wvh">Here</a></p>
+            <p>For chat, please go to: <a href="https://oncosupportgroups-2.com">Here</a></p>
+        {% elif cluster == 3 %}
+            <p>For video meetings, please join: <a href="https://meet.google.com/zif-eajy-ikk">Here</a></p>
+            <p>For chat, please go to: <a href="https://oncosupportgroups-3.com">Here</a></p>
+        {% elif cluster == 4 %}
+            <p>For video meetings, please join: <a href="https://meet.google.com/soa-sqft-drt">Here</a></p>
+            <p>For chat, please go to: <a href="https://oncosupportgroups-4.com">Here</a></p>
+        {% elif cluster == 5 %}
+            <p>For video meetings, please join: <a href="https://meet.google.com/jqs-tmdp-yjb">Here</a></p>
+            <p>For chat, please go to: <a href="https://oncosupportgroups-5.com">Here</a></p>
+        {% elif cluster == 6 %}
+            <p>For video meetings, please join: <a href="https://meet.google.com/pos-wovg-exg">Here</a></p>
+            <p>For chat, please go to: <a href="https://oncosupportgroups-6.com">Here</a></p>
+        {% elif cluster == 7 %}
+            <p>For video meetings, please join: <a href="https://meet.google.com/hii-didt-sxt">Here</a></p>
+            <p>For chat, please go to: <a href="https://oncosupportgroups-7.com">Here</a></p>
+        {% endif %}
+        <a href="{{ url_for('cluster_links') }}">Click Here to see additional support group resources</a>
+        <h2>Your Support Group:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Age</th>
+                    <th>Cancer Diagnosis</th>
+                    <th>Relationship</th>
+                    <th>Gender</th>
+                    <th>Ethnicity</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in cluster_data %}
+                <tr>
+                    <td>{{ row['Full Name'] }}</td>
+                    <td>{{ row['Age'] }}</td>
+                    <td>{{ row['Cancer Diagnosis'] }}</td>
+                    <td>{{ row['Relationship'] }}</td>
+                    <td>{{ row['Gender'] }}</td>
+                    <td>{{ row['Ethnicity'] }}</td>
+                    <td>{{ row['Phone Number'] }}</td>
+                    <td>{{ row['Email'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Support Group Intake Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Support Group Intake Form</h1>
+        <form action="/cluster" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="relationship">Relationship:</label>
+            <select id="relationship" name="relationship" required>
+                <option value="Patient">Patient</option>
+                <option value="Parent of a patient">Parent of a patient</option>
+                <option value="Caregiver">Caregiver</option>
+                <option value="Physician">Physician</option>
+            </select><br><br>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Female">Other</option>
+            </select><br><br>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="ethnicity">Ethnicity:</label>
+            <select id="ethnicity" name="ethnicity" required>
+                <option value="American Indian/Alaska Native">American Indian/Alaska Native</option>
+                <option value="Asian">Asian</option>
+                <option value="Black or African American">Black or African American</option>
+                <option value="Native Hawaiian or other Pacific Islander">Native Hawaiian or other Pacific Islander</option>
+                <option value="White">White</option>
+            </select><br><br>
+            
+            <label for="diagnosis_by_location">Diagnosis by Location:</label>
+            <select id="diagnosis_by_location" name="diagnosis_by_location" required>
+                <option value="AIDS-Related">AIDS-Related</option>
+                <option value="Breast">Breast</option>
+                <option value="Digestive/Gastrointestinal">Digestive/Gastrointestinal</option>
+                <option value="Endocrine and Neuroendocrine">Endocrine and Neuroendocrine</option>
+                <option value="Eye">Eye</option>
+                <option value="Genitourinary">Genitourinary</option>
+                <option value="Germ Cell">Germ Cell</option>
+                <option value="Gynecologic">Gynecologic</option>
+                <option value="Head and Neck">Head and Neck</option>
+                <option value="Hematologic/Blood">Hematologic/Blood</option>
+                <option value="Musculoskeletal">Musculoskeletal</option>
+                <option value="Neurologic">Neurologic</option>
+                <option value="Respiratory/Thoracic">Respiratory/Thoracic</option>
+                <option value="Skin">Skin</option>
+            </select><br><br>
+            
+            <label for="cancer_diagnosis">Cancer Diagnosis:</label>
+            <input type="text" id="cancer_diagnosis" name="cancer_diagnosis" required><br><br>
+            
+            <label for="cancer_stage">Cancer Stage:</label>
+            <input type="number" id="cancer_stage" name="cancer_stage" required><br><br>
+            
+            <label for="time_with_cancer">Time with Cancer (months):</label>
+            <input type="number" id="time_with_cancer" name="time_with_cancer" required><br><br>
+            
+            <label for="primary_language">Primary Speaking Language:</label>
+            <input type="text" id="primary_language" name="primary_language" required><br><br>
+            
+            <label for="parenting_situation">Parenting Situation:</label>
+            <select id="parenting_situation" name="parenting_situation" required>
+                <option value="Single Parent">Have children</option>
+                <option value="Two Parents">Planning on having children</option>
+                <option value="Other">No children</option>
+            </select><br><br>
+            
+            <label for="personal_concern">Personal Concern:</label>
+            <select id="personal_concern" name="personal_concern" required>
+                <option value="Financial">Financial</option>
+                <option value="Emotional">Emotional</option>
+                <option value="Lack of Knowledge">Lack of Knowledge</option>
+            </select><br><br>
+
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </div>
+</body>
+</html>
