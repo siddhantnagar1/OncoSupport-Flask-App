@@ -26,7 +26,7 @@ kprototypes==0.1.1
 MarkupSafe==2.1.3
 numpy==1.21.1
 packaging==23.2
-pandas==2.1.1
+pandas==1.3.3
 python-dateutil==2.8.2
 pytz==2023.3.post1
 six==1.16.0
