@@ -6,6 +6,8 @@ import joblib
 
 app = Flask(__name__)
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://czfnvrimtfusep:7a82f0937944813b2976360715d3b36bd8729ea2b59d28b0daa057101d64076d@ec2-34-228-248-175.compute-1.amazonaws.com:5432/d5i0uua42r6ui'
+
 # Load the initial patient data
 patients = pd.read_csv('LLS_patient_data (2).csv')
 
